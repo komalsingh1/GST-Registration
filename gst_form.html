@@ -1,0 +1,116 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="gst_form.js"></script>
+	<script src="header.html"></script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+	<script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+<style>
+   h2{
+   text-decoration:underline;}
+   h4{
+   text-decoration:underline;}
+   .error {color: #FF0000;}
+   
+</style>
+</head>
+<body>
+	<div id="includedContent"></div>
+	<div class="container">
+	<form name ="gst_form"  action="gst_submit.php "   method="POST" > 	
+	<p><h2 class="text-primary text-center"><b>GST CUSTOMER REGISTRATION FORM</b></h2></p>
+    <h4>Details to be Provided by the Customer</h4>
+	
+	 <div class="row">
+     <div class="col-xs-4"><label<h2><b>Customer name </b></h2></label></div>
+    <div class="col-xs-8"><input class="form-control" type="text" id="cn"  name="CN"  required></div>
+	</div>
+	<p><b class="text-center">GST Identification Number</b></p>
+	<div class="row">
+	<p class="col-xs-6"> <label><b >GSTIN</b></label>
+    <input class="form-control" type="text" name="GSTIN" required></p>
+	<p class="col-xs-6"> <label><b >ARN</b></label>
+	<input class="form-control" type="text"  name="ARN" required></p>
+	</div>
+	<div class="row">
+	<div class="col-xs-3"><p><label><b >Principal Place of Bussiness With State(as per GSTIN)</b></label></div>
+    <div class="col-xs-3"><input class="form-control" type="text"  name="add"></p></div>
+	 <div class="col-xs-3"><p><label><b >State Code(as per GSTIN)</b></label></div>
+     <select  name="st_code" id="st_code">
+		<option>01</option>
+		<option>02</option>
+		<option>03</option>
+		<option>04</option>
+		<option>05</option>
+		<option>06</option>
+		<option>07</option>
+		<option>08</option>
+		<option>09</option>
+		<option>10</option>
+		<option>11</option>
+		<option>12</option>
+		<option>13</option>
+		<option>14</option>
+		<option>15</option>
+		<option>16</option>
+		<option>17</option>
+		<option>18</option>
+		<option>19</option>
+		</select>
+	</div>
+	<div class="row">
+	<div class="col-xs-4"><p><label><b>Address Of additional place Of Business </b></label></div>
+    <div class="col-xs-8"><input class="form-control" type="text"  name="add_add"></p></div>
+	</div>
+	<div class="row">
+    <div class="col-xs-4"><p><label><b>PAN </b></label></div>
+    <div class="col-xs-8"><input class="form-control" type="text"  name="pan" required></p></div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4"><p><label><b>E-Mail id</b></label></div>
+		<div class="col-xs-8"><input class="form-control" id="e_mail" name="email_id"   required></p></div>
+	</div>
+	<div class="row">
+	<div class="col-xs-4"><p><label><b> Mobile No </b></label></div>
+    <div class="col-xs-4"><input class="form-control" type="text"  name="mob" required></p></div>
+	</div>
+	<p><b>Bank Details</b></p>
+	<div class="row">
+	<p class="col-xs-4"> <label><b >Bank Account Number</b></label>
+    <input class="form-control" type="text" name="bank_acc" required></p>
+	<p class="col-xs-4"> <label><b >Name Of the Bank</b><br>along with the address</label>
+	<input class="form-control" type="text" name="add_bank" required></p>
+	<p class="col-xs-4"> <label><b >IFS Code</b></label>
+	<input class="form-control" type="text" name="ifsc" required></p>
+	</div>
+    <p><label><b>Type of  Registration (as Composite dealer/ Regular dealer) (for supplier of materials/contractor/service providers) </b></label>
+    <select  name="tor" id="tor">
+		<option>Composite Dealer</option>
+		<option>Regular Dealer</option>
+	</select>
+	<h5><i>Note :  
+       The dealers having annual turnover below Rs.20.00 Lakh from all his business under same PAN in a State is exempted from compulsory registration. However they can take voluntary registration. Such dealers will have to produce a certificate from a practicing CA/Cost Accountant authenticating their annual turnover.    </i></h5>
+       <div class="clearfix">
+	   <div class="row">
+	   <div class="col-xs-6">
+       <button class="btn btn-block btn-danger"><i class="fa fa-trash"></i>Cancel</button>
+	   </div>
+	   <div class="col-xs-6">
+       <button class="btn btn-block btn-primary"><i class="fa fa-paper-plane"></i>Submit</button>
+	   </div>
+    </div>
+	</div>
+	</div>
+	
+	</form> 
+</body>
+</html>

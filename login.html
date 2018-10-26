@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		form {
+		border: 3px solid #f1f1f1;
+		}
+	
+		input[type=text], input[type=password] {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+		}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+</style>
+<body>
+<h4>Login Form</h4>
+<form action="login.php">
+  <div class="container">
+    <label><b>Vendor Code</b></label>
+    <input type="text" placeholder="Enter Vendor Code" name="vendor" required>
+	<label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <button class="btn btn-block btn-success">Login</button>  
+    <input type="checkbox" checked="checked"> Remember me
+  </div>
+</form>
+
+</body>
+</html>

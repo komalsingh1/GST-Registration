@@ -1,0 +1,107 @@
+<?php
+$con=mysqli_connect("localhost","root","","test");
+$result = mysqli_query($con,"SELECT * FROM gst_details");
+?>
+<html>
+<head>
+	<title>Displaying Details of customer</title>
+	<style type="text/css">
+		body {
+			font-size: 5px;
+			color: #343d44;
+			font-family: "segoe-ui", "open-sans", tahoma, arial;
+		}
+		table {
+			margin: auto;
+			font-family: "Lucida Sans Unicode", "Lucida Grande", "Segoe Ui";
+			
+		}
+
+		h1 {
+			margin: 10px auto 0;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 5px;
+		}
+
+		table td {
+			transition: all .5s;
+		}
+		
+		
+		.data-table {
+			border-collapse: collapse;
+			font-size: 14px;
+			min-width: 50px;
+		}
+
+		.data-table th, 
+		.data-table td {
+			border: 1px solid #e1edff;
+			
+		}
+		.data-table caption {
+			
+		}
+
+		
+		.data-table thead th {
+			background-color: #508abb;
+			color: #FFFFFF;
+			border-color: #6ea1cc !important;
+			text-transform: uppercase;
+		}
+
+		
+		.data-table tbody td {
+			color: #353535;
+		}
+		.data-table tbody td:first-child,
+		.data-table tbody td:nth-child(4),
+		.data-table tbody td:last-child {
+			text-align: right;
+		}
+		.data-table tbody tr:nth-child(odd) td {
+			background-color: #f4fbff;
+		}
+		.data-table tbody tr:hover td {
+			background-color: #ffffa2;
+			border-color: #ffff0f;
+		}
+		.data-table tfoot th {
+			background-color: #e5f5ff;
+			text-align: right;
+		}
+		.data-table tfoot th:first-child {
+			text-align: left;
+		}
+		.data-table tbody td:empty
+		{
+			background-color: #ffcccc;
+		}
+	</style>
+</head>
+<body>
+	
+	<table class="data-table">
+		<caption class="title">Details Of the Customer</caption>
+		<thead>
+			<tr>
+				<th>Customer Name </th>
+				<th>GSTIN</th>
+				<th>ARN</th>
+				<th>Principal place of Business</th>
+				<th>state Code</th>
+				<th>Pan Number</th>
+				<th>E-Mail </th>
+				<th>Mobile Number</th>
+				<th>ABank Account Number</th>
+				<th>NAme of the bank</th>
+				<th>IFS Code</th>
+				<th>Type of registration</th>
+			</tr>
+		</thead>
+	</table>
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="header.html"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+     <style>
+	form {
+    border: 3px solid #f1f1f1;
+	}
+
+	input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	}
+
+	button:hover {
+    opacity: 0.8;
+	}
+
+	span.psw {
+    float: right;
+    padding-top: 16px;
+	}
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<div id="includedContent"></div>
+		<h4>Login Form</h4>
+		<form action="login_details.php" method="POST">
+		<label><b>Vendor Code</b></label>
+		<input type="text" placeholder="Enter Vendor Code" name="email" required>
+		<label><b>Password</b></label>
+		<input type="password" placeholder="Enter Password" name="passw" required>
+		<button class="btn btn-block btn-success">Login</button>  
+		<input type="checkbox" checked="checked"> Remember me
+	</div>
+</form>
+</body>
+</html>
